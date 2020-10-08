@@ -1,2 +1,51 @@
-# satellite-image-super-resolution
-A Comparative Study on CNN-Based Single-Image Super-Resolution techniques for Satellite Images.
+# CNN-Based Single-Image Super-Resolution of Satellite Images
+This repository contains the results for "A Comparative Study on CNN-Based Single-Image Super-Resolution Techniques for Satellite Images", my first bachelor's project. You can find the trained models in the **Releases** section of the repository. *I'll soon add the scripts for all the experiments. The experiments have been developed in separate private repositories, so it's gonna take some time to rearrange them and upload them here.* Check out this [english article]() or the [گزارش فارسی](https://drive.google.com/file/d/1n20s3Pb_dP0E-lA1Z8n9bMoC0Kt9ZTys/view?usp=sharing) for more details on the project, including a theory my instructor had for making a Mixture of Experts from the techniques, which unfortunately failed to produce any results.
+
+## Compared Techniques
+Based on their novelty and reported performances, we have chosen the following techniques for this study, sorted by their earliest draft publication date:
+
++ Zhang et al., Residual Dense Network (RDN) ([repo](https://github.com/yulunzhang/RDN))
++ Zhang et al., Residual Channel Attention Network (RCAN) ([repo](https://github.com/yulunzhang/RCAN))
++ Li et al., Feedback Network for Image Super-Resolution (SRFBN) ([repo](https://github.com/Paper99/SRFBN_CVPR19))
++ Anwar & Barnes, Densly Residual Laplacian Network (DRLN) ([repo](https://github.com/saeed-anwar/DRLN))
++ Li et al., Gated Multiple Feedback Network (GMFN) ([repo](https://github.com/liqilei/GMFN))
++ Mei et al., Cross-Scale Non-Local Network (CSNLN) ([repo](https://github.com/SHI-Labs/Cross-Scale-Non-Local-Attention))
+
+## Performance Evaluation
+The results for the models marked with an * have been directly lifted from our [baseline article](https://ieeexplore.ieee.org/abstract/document/8677274). *I'll soon fill in the blank ones!*
+
+| Scale | Model     | PSNR      | SSIM      | Weights (Millions) | Training Time (Hours) | Inference Time (Seconds) |
+|-------|-----------|-----------|-----------|--------------------|-----------------------|--------------------------|
+| 2     | Bi-cubic* | 34.01     |     0.938 | 0                  | 0                     | ?                        |
+|       | SRCNN*    | 36.79     |     0.960 | -                  | -                     | -                        |
+|       | VDSR*     | 37.94     |     0.967 | -                  | -                     | -                        |
+|       | SRGAN*    | 37.69     |     0.963 | -                  | -                     | -                        |
+|       | EEGAN*    | 38.82     |     0.973 | -                  | -                     | -                        |
+|       | CSNLN     | **39.87** | **0.976** | ?                  | ?                     | ?                        |
+|       | DRLN      | **39.87** | **0.976** | ?                  | ?                     | ?                        |
+|       | GMFN      | 39.49     | 0.974     | ?                  | ?                     | ?                        |
+|       | RCAN      | 39.83     | **0.976** | ?                  | ?                     | ?                        |
+|       | RDN       | 39.75     | **0.976** | ?                  | ?                     | ?                        |
+|       | SRFBN     | 39.49     | 0.974     | ?                  | ?                     | ?                        |
+| 3     | Bi-cubic* | 30.52     | 0.870     | 0                  | 0                     | ?                        |
+|       | SRCNN*    | 32.44     | 0.906     | -                  | -                     | -                        |
+|       | VDSR*     | 33.69     | 0.924     | -                  | -                     | -                        |
+|       | SRGAN*    | 33.70     | 0.919     | -                  | -                     | -                        |
+|       | EEGAN*    | 34.84     | **0.936** | -                  | -                     | -                        |
+|       | CSNLN     | **35.39** | **0.936** | ?                  | ?                     | ?                        |
+|       | DRLN      | 35.22     | 0.932     | ?                  | ?                     | ?                        |
+|       | GMFN      | 35.26     | 0.932     | ?                  | ?                     | ?                        |
+|       | RCAN      | 35.24     | 0.932     | ?                  | ?                     | ?                        |
+|       | RDN       | 35.19     | 0.933     | ?                  | ?                     | ?                        |
+|       | SRFBN     | 35.18     | 0.931     | ?                  | ?                     | ?                        |
+| 4     | Bi-cubic* | 28.54     | 0.808     | 0                  | 0                     | ?                        |
+|       | SRCNN*    | 30.06     | 0.848     | -                  | -                     | -                        |
+|       | VDSR*     | 31.06     | 0.874     | -                  | -                     | -                        |
+|       | SRGAN*    | 31.17     | 0.882     | -                  | -                     | -                        |
+|       | EEGAN*    | 32.36     | **0.898** | -                  | -                     | -                        |
+|       | CSNLN     | 32.84     | 0.885     | ?                  | ?                     | ?                        |
+|       | DRLN      | 32.87     | 0.885     | ?                  | ?                     | ?                        |
+|       | GMFN      | **32.96** | 0.887     | ?                  | ?                     | ?                        |
+|       | RCAN      | 32.90     | 0.886     | ?                  | ?                     | ?                        |
+|       | RDN       | 32.89     | 0.887     | ?                  | ?                     | ?                        |
+|       | SRFBN     | 32.82     | 0.884     | ?                  | ?                     | ?                        |
