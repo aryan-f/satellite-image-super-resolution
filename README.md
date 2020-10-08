@@ -4,7 +4,7 @@ This repository contains the results for "A Comparative Study on CNN-Based Singl
 ## Compared Techniques
 Based on their novelty and reported performances, we have chosen the following techniques for this study, sorted by their earliest draft publication date:
 
-+ Zhang et al., Residual Dense Network (RDN) ([repo](https://github.com/yulunzhang/RDN))
++ Zhang et al., Residual Dense Network (RDN) ([repo](https://github.com/yjn870/RDN-pytorch))
 + Zhang et al., Residual Channel Attention Network (RCAN) ([repo](https://github.com/yulunzhang/RCAN))
 + Li et al., Feedback Network for Image Super-Resolution (SRFBN) ([repo](https://github.com/Paper99/SRFBN_CVPR19))
 + Anwar & Barnes, Densly Residual Laplacian Network (DRLN) ([repo](https://github.com/saeed-anwar/DRLN))
