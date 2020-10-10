@@ -49,3 +49,10 @@ The results for the models marked with an * have been directly lifted from our [
 |       | RCAN      | 32.90     | 0.886     | ?                  | ?                     | ?                        |
 |       | RDN       | 32.89     | 0.887     | ?                  | ?                     | ?                        |
 |       | SRFBN     | 32.82     | 0.884     | ?                  | ?                     | ?                        |
+
+# Visual Comparison
+The following shows a single image, being down-scaled and then reconstructed, first using the Bicubic interpolation, and
+then using the trained SISR models.
+
+![Image Reconstruction](figures/samples.png)
+ 
